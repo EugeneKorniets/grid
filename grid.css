@@ -1,0 +1,48 @@
+.grid-name-container {
+  display: grid;
+  grid-template-columns: [col-1-start] 1fr
+                         [col-1-end col-2-start] 1fr
+                         [col-2-end col-3-start] 1fr
+                         [col-3-end col-4-start] 1fr
+                         [col-4-end col-5-start] 1fr
+                         [col-5-end col-6-start] 1fr
+                         [col-6-end col-7-start] 1fr
+                         [col-7-end col-8-start] 1fr
+                         [col-8-end col-9-start] 1fr
+                         [col-9-end col-10-start] 1fr
+                         [col-10-end col-11-start] 1fr
+                         [col-11-end col-12-start] 1fr
+                         [col-12-end];
+  grid-gap: .8rem;
+  margin: 0 .8rem;
+}
+
+.aside-bar-2 {
+  grid-column: col-1 / col-3;
+  background-color: lightcyan;
+}
+
+.content-2 {
+  grid-column: col-4 / col-12;
+  margin: 0;
+}
+
+.content-item-2 {
+  grid-column: span 12;
+  min-height: 4rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: lightcyan;
+}
+
+@media (min-width: 768px) {
+  .content-item-2 {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-item-2 {
+    grid-column: span 4;
+  }
+}
